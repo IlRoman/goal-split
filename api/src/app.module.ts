@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { join } from 'node:path';
 import { DatabaseModule } from './modules/database/database.module';
-import { HelloModule } from './modules/hello/hello.module';
+import { GoalsModule } from './modules/goals/goals.module';
 
 @Module({
   imports: [
@@ -11,7 +11,7 @@ import { HelloModule } from './modules/hello/hello.module';
       envFilePath: join(__dirname, '../../.env'),
     }),
     DatabaseModule,
-    HelloModule,
+    GoalsModule,
   ],
 })
 export class AppModule {}
